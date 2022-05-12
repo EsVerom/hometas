@@ -24,19 +24,19 @@ public class PalindromeFinderTask {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter a five-digit number");
-        int instertNum=in.nextInt();
-        while ( instertNum < 10000 || instertNum > 99999){
+        int insertNum=in.nextInt();
+        while ( insertNum < 10000 || insertNum > 99999){
             System.out.println("Please enter again a five-digit number");
-            instertNum=in.nextInt();
+            insertNum=in.nextInt();
         }
-        System.out.println("Your number = " + instertNum);
-        int lastNum = instertNum % 10;
-        int firstNum = instertNum / 10000;
+        System.out.println("Your number = " + insertNum);
+        int lastNum = insertNum % 10;
+        int firstNum = insertNum / 10000;
         System.out.println("First digit = " + firstNum + "; Last digit = " + lastNum );
 
         if (lastNum == firstNum) {
-            int secondLastNum = (instertNum % 100) / 10;
-            int secondNum = (instertNum / 1000) % 10;
+            int secondLastNum = (insertNum % 100) / 10;
+            int secondNum = (insertNum / 1000) % 10;
             System.out.println("Second digit = " + secondNum + "; Pre Last digit = " + secondLastNum);
             if (secondNum == secondLastNum) {
                 System.out.println("Congratulations, your number is palindrome!");
