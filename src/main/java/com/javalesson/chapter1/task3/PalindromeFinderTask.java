@@ -23,10 +23,10 @@ public class PalindromeFinderTask {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Please enter a five-digit number");
+        System.out.println("Please enter a five-digit palindrome number");
         int insertNum=in.nextInt();
         while ( insertNum < 10000 || insertNum > 99999){
-            System.out.println("Please enter again a five-digit number");
+            System.out.println("Please enter again a five-digit palindrome number");
             insertNum=in.nextInt();
         }
         System.out.println("Your number = " + insertNum);
@@ -39,7 +39,7 @@ public class PalindromeFinderTask {
             int secondNum = (insertNum / 1000) % 10;
             System.out.println("Second digit = " + secondNum + "; Pre Last digit = " + secondLastNum);
             if (secondNum == secondLastNum) {
-                System.out.println("Congratulations, your number is palindrome!");
+                System.out.println("Congratulations, your number" + insertNum + "is palindrome!");
             }
             else {
                 System.out.println("Sorry but your number is not palindrome");
